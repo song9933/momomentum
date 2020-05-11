@@ -1,12 +1,10 @@
-body {
-    background-color: #ecf0f1;
-  }
+
   .btn {
     cursor: pointer;
   }
-body {
+  body {
     color: #34495e;
-
+    text-align: center;
   }
   .clicked {
     color: #7f8c8d;
@@ -20,7 +18,9 @@ body {
   .showing {
     display: block;
   }
-  
+  .js-toDoList li {
+    list-style-type: none;
+  }
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -29,7 +29,9 @@ body {
       opacity: 1;
     }
   }
-  
+  .lineThrough{
+    text-decoration: line-through;
+  }
   .bgImage {
     position: absolute;
     top: 0;

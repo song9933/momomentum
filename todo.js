@@ -6,6 +6,11 @@ const TODOS_LS = "toDos";
 
 let toDos = [];
 
+function checkToDo(event){
+  const chkBox = event.target;
+  const chkLi = chkBox.parentNode;
+  chkLi.classList.add("lineThrough");
+}
 
 function deleteToDo(event){
   const btn = event.target;
@@ -26,13 +31,16 @@ function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
+  const check = document.createElement("input");
   const newId = toDos.length + 1;
-  
+  check.type = "checkbox";
   delBtn.innerText = "X";
   delBtn.addEventListener("click", deleteToDo);
+  check.addEventListener("click", checkToDo);
   span.innerText = text;
-  li.appendChild(delBtn);
+  li.appendChild(check);
   li.appendChild(span);
+  li.appendChild(delBtn);
   li.id = newId;
   toDoList.appendChild(li);
   const toDoObj = {
