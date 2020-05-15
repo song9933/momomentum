@@ -4,13 +4,13 @@ function handleGeoSuccess(position){
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const coordObj = {
-        latitude,
-        longitude
+        latitude : latitude,
+        longitude : longitude
     };
 }
 
 function handleGeoError(){
-    console.log('cant access geo location');
+    console.log('can`t access geo location');
 }
 
 function askForCoords(){
